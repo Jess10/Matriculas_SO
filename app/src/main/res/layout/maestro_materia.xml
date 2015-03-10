@@ -3,90 +3,154 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView android:text="ID Maestro_Materia: "
-        android:id="@+id/TextView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </TextView>
-    <EditText android:text=""
-        android:id="@+id/txtMaestroMat"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TextView20"
-        android:layout_alignParentStart="true">
-    </EditText>
-
-
-    <TextView android:text="ID Persona: "
-        android:id="@+id/TextView21"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/txtMaestroMat"
-        android:layout_alignParentStart="true">
+        android:text="Maestro Materia"
+        android:id="@+id/textView07"
+        android:layout_gravity="center_horizontal" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.52">
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:text="ID Maestro_Materia: "
+            android:id="@+id/TextView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0">
+        </TextView>
+
+        <EditText
+            android:text=""
+            android:id="@+id/txtMaestroMat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView20"
+            android:ems="10"
+            android:layout_column="3" >
+        </EditText>
+    </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:text="ID Persona: "
+                android:id="@+id/TextView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMaestroMat"
+                android:layout_column="0">
     </TextView>
 
-    <EditText android:text=""
-        android:id="@+id/txtPersonas"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:password="true"
-        android:layout_below="@+id/TextView21"
-        android:layout_alignParentStart="true">
-    </EditText>
+            <EditText
+                android:text=""
+                android:id="@+id/txtPersonas"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TextView21"
+                android:ems="10"
+                android:layout_column="3" >
+            </EditText>
 
-    <TextView android:text="ID Materia: "
-        android:id="@+id/TextView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/txtPersonas"
-        android:layout_alignParentStart="true">
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <TextView
+            android:text="ID Materia: "
+            android:id="@+id/TextView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPersonas"
+            android:layout_column="0">
     </TextView>
 
-    <EditText android:text=""
-        android:id="@+id/txtMaterias"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:password="true"
-        android:layout_below="@+id/TextView22"
-        android:layout_alignParentStart="true">
-    </EditText>
+            <EditText
+                android:text=""
+                android:id="@+id/txtMaterias"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TextView22"
+                android:ems="10"
+                android:layout_column="3" >
+                </EditText>
 
-    <TextView android:text="Cupos: "
-        android:id="@+id/TextView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/txtMaterias"
-        android:layout_alignParentStart="true">
-    </TextView>
+        </TableRow>
 
-    <EditText android:text=""
-        android:id="@+id/txtCupos"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:password="true"
-        android:layout_below="@+id/TextView23"
-        android:layout_alignParentStart="true">
-    </EditText>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
-    <TextView android:text="Paralelo: "
-        android:id="@+id/TextView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/txtCupos"
-        android:layout_alignParentStart="true">
-    </TextView>
+            <TextView
+                android:text="Cupos: "
+                android:id="@+id/TextView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMaterias"
+                android:layout_column="0" >
+            </TextView>
 
-    <EditText android:text=""
-        android:id="@+id/txtParalelos"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:password="true"
-        android:layout_below="@+id/TextView24"
-        android:layout_alignParentStart="true">
-    </EditText>
+            <EditText
+                android:text=""
+                android:id="@+id/txtCupos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TextView23"
+                android:ems="10"
+                android:layout_column="3" >
+            </EditText>
 
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:text="Paralelo: "
+                android:id="@+id/TextView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCupos"
+                android:layout_column="0">
+            </TextView>
+
+            <EditText
+                android:text=""
+                android:id="@+id/txtParalelos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TextView24"
+                android:ems="10"
+                android:layout_column="3" >
+            </EditText>
+        </TableRow>
+    </TableLayout>
 </LinearLayout>

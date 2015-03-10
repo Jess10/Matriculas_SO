@@ -4,15 +4,33 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 
 public class Matricula_Registro extends Activity {
+
+    Spinner carrera;
+    ListView materia;
+    TextView nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matricula__registro);
+        carrera=(Spinner)findViewById(R.id.spinner_carrera);
+        materia=(ListView)findViewById(R.id.list_materias);
+        nombre=(TextView)findViewById(R.id.txt_nom_ape);
+        Bundle extras=getIntent().getExtras();
+        if(extras == null){
+            return;
+        }
+        String snombre=extras.getString("nombre1");
+        String sapellido=extras.getString("nombre2");
+
     }
+
 
 
     @Override
