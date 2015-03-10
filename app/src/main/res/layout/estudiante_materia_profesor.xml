@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <TextView android:text="ESTUDIANTE_MATERIA: "
         android:id="@+id/TextView30"
@@ -63,10 +62,14 @@
         android:layout_alignParentStart="true">
     </TextView>
 
-    <Spinner
-        android:layout_width="match_parent"
+    <EditText android:text=""
+        android:id="@+id/txtEstado"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner" />
+        android:password="true"
+        android:layout_below="@+id/TextView33"
+        android:layout_alignParentStart="true">
+    </EditText>
 
     <TextView android:text="MATRICULA: "
         android:id="@+id/TextView34"
@@ -95,10 +98,10 @@
         android:layout_alignParentStart="true">
     </TextView>
 
-    <CalendarView
+    <Spinner
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/calendarView2" />
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner" />
 
 
     <TextView android:text="COSTO: "
