@@ -12,35 +12,34 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 /**
- * Created by Gavilanes on 09/03/2015.
+ * Created by Luis on 10/03/2015.
  */
-public class Ubicacion_Admin  extends Activity {
-    public EditText id_ubicacion,nombre;
-    Spinner ubi_id_ubicacion;
+
+public class Maestro_Materia extends Activity {
+    public EditText id_maestro_materia,id_persona, id_materias,cupos,paralelo;
     String select;
     int hasta=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ubicacion);
-        id_ubicacion = (EditText) findViewById(R.id.txt_cod_ubi);
-        nombre=(EditText)findViewById(R.id.txt_nombre_ubi);
-        ubi_id_ubicacion=(Spinner)findViewById(R.id.spinner_ubicacion);
+        id_maestro_materia = (EditText) findViewById(R.id.txtCod_Materia);
+        id_persona=(EditText)findViewById(R.id.txtCreditos);
+        id_materias=(EditText)findViewById(R.id.txtSemestre);
+        cupos=(EditText)findViewById(R.id.txtCupos);
+        paralelo=(EditText)findViewById(R.id.txtParalelos);
+
         cargar();
-        /*ubi_id_ubicacion.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                select=ubi_id_ubicacion.getSelectedItem().toString();
-            }
-        });*/
+
     }
     public void cargar(){
 
-        BaseDatos dbobject = new BaseDatos(this, "Matriculas", null, 1);
+        BaseDatos dbobject = new BaseDatos(this, "Maestro_Materia", null, 1);
         SQLiteDatabase bd = dbobject.getWritableDatabase();
 
         if (bd!=null) {
-            Cursor fila = bd.rawQuery("select NOMBRE, ID_UBICACION from UBICACION", null);
+            Cursor fila = bd.rawQuery("select ID_MAESTRO_MATERIA, ID_PERSONA, ID_MATERIA, CUPOS, PARALELO from MAESTRO_MATERIA", null);
             int cantidad = fila.getCount();
             int i=0;
             String [] arreglo=new String[cantidad];
@@ -61,21 +60,21 @@ public class Ubicacion_Admin  extends Activity {
 
             //Ordenar Arreglo
 
-            ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arreglo);
-            //ListView lista = (ListView) findViewById(R.id.listView1);
-            ubi_id_ubicacion.setAdapter(adapter);
 
         }
     }
     public void ingresar (View v){
-        BaseDatos dbobject = new BaseDatos(this, "Matriculas", null, 1);
+        BaseDatos dbobject = new BaseDatos(this, "Materia", null, 1);
         SQLiteDatabase bd = dbobject.getWritableDatabase();
         ContentValues registro = new ContentValues();
-        registro.put("ID_UBICACION", Integer.parseInt(id_ubicacion.getText().toString()));
-        registro.put("NOMBRE", nombre.getText().toString());
-        //registro.put("UBI_ID_UBICACION", );
+        registro.put("COD_MAESTRO_MATERIA", Integer.parseInt(id_maestro_materia.getText().toString()));
+        registro.put("COD_PERSONA", Integer.parseInt(id_persona.getText().toString()));
+        registro.put("COD DE MATERIA", id_materias.getText().toString());
+        registro.put("CUPOS", cupos.getText().toString());
+        registro.put("PARALELO", Integer.parseInt(paralelo.getText().toString()));
+        //registro.put("COD_MAESTRO_MATERIA", );
         try {
-            bd.insert("UBICACION", null, registro);
+            bd.insert("MAESTRO_MATERIA", null, registro);
             bd.close();
             Toast.makeText(this,
                     "Ingreso correcto",
