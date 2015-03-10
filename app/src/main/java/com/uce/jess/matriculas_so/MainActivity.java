@@ -20,6 +20,10 @@ public class MainActivity extends Activity {
         Intent siguiente= new Intent(getApplicationContext(),Ubicacion_Admin.class);
         startActivity(siguiente);
     }
+    public void prueba (View v){
+        Intent sigAdmi= new Intent(this,Administracion.class);
+        startActivity(sigAdmi);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

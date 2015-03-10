@@ -60,5 +60,14 @@
         android:layout_centerHorizontal="true"
         android:onClick="ubi"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button8"
+        android:layout_alignParentBottom="true"
+        android:onClick="prueba"
+        android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>

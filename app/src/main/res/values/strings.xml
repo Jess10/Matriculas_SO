@@ -3,4 +3,6 @@
     <string name="pantalla_ubi">Configuracion Ubicacion</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_personal">persona</string>
+    <string name="title_activity_administracion">administracion</string>
 </resources>

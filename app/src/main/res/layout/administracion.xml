@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Persona"
         android:id="@+id/button"
+        android:onClick="FPersona"
         android:layout_gravity="center_horizontal" />
 
     <Button
