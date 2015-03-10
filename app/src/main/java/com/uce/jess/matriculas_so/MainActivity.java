@@ -1,9 +1,11 @@
 package com.uce.jess.matriculas_so;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends Activity {
@@ -12,10 +14,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BaseDatos dbobject = new BaseDatos(this, "Matriculas", null, 1);
-       
-    }
 
+    }
+    public void ubi(View v){
+        Intent siguiente= new Intent(getApplicationContext(),Ubicacion_Admin.class);
+        startActivity(siguiente);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

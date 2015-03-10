@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.uce.jess.matriculas_so.Ubicacion_Admin"
+            android:label="@string/pantalla_ubi" >
+        </activity>
     </application>
 
 </manifest>
