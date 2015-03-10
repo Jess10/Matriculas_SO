@@ -5,4 +5,18 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_personal">persona</string>
     <string name="title_activity_administracion">administracion</string>
+        <!-- Conjunto de Strings para el View GameSpinner -->
+        <string-array name="Sexo">
+            <item>Seleccionar</item>
+            <item>Femenino</item>
+            <item>Masculino</item>
+           </string-array>
+
+    <string-array name="Ocupacion">
+        <item>Seleccionar</item>
+        <item>Profesor</item>
+        <item>Estudiante</item>
+    </string-array>
+
+
 </resources>
