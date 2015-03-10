@@ -20,24 +20,27 @@
             android:name=".Personal"
             android:label="@string/title_activity_personal" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name ="android.intent.category.DEFAULT"/>
-            </intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Administracion"
             android:label="@string/title_activity_administracion" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name ="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
-
         <activity
-            android:name="com.uce.jess.matriculas_so.Ubicacion_Admin"
+            android:name=".Ubicacion_Admin"
             android:label="@string/pantalla_ubi" >
+        </activity>
+        <activity
+            android:name=".Matricula_Registro"
+            android:label="@string/title_activity_matricula__registro" >
         </activity>
     </application>
 
