@@ -119,12 +119,10 @@ public class Ubicacion_Admin  extends Activity {
             if(linea2!=0)
                 registro.put("UBI_ID_UBICACION",linea2 );
             else registro.put("UBI_ID_UBICACION", (byte[]) null);
-            try {
+
                 bd.insert("UBICACION", null, registro);
                 bd.close();
-                }catch(){
 
-            }
             }
         public void borrar(View v) {
             BaseDatos dbobject = new BaseDatos(this, "Matriculas", null, 1);
